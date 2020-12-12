@@ -130,7 +130,7 @@ class YTdl:
                     int(d["downloaded_bytes"]), binary=True
                 )
                 yt_progress_updates[f"{chat_id}{message_id}"]["total"] = size.format_size(
-                    int(d["total_bytes_estimate"]), binary=True
+                    int(d["_total_bytes_str"]), binary=True
                 )
                 yt_progress_updates[f"{chat_id}{message_id}"]["file_name"] = d["filename"]
         except Exception as e:
